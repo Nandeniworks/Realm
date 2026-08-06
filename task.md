@@ -1,0 +1,8 @@
+- [x] Configure Google Fonts linking Fraunces (headings) and Plus Jakarta Sans (body) in index.html
+- [x] Integrate Tailwind CSS v4 variables mapping theme custom fonts, color schemes, and glassmorphism in index.css
+- [x] Overhaul LandingPage.jsx implementing asymmetrical editorial headlines, whitespace blockquotes, and theme hover presets
+- [x] Install Lenis smooth scroll package and register global tracking hooks in App.jsx
+- [x] Update CustomCursor.jsx to support expanded link hover triggers and storage event mutation hooks
+- [x] Install Three.js package and build starlight constellation camera parallax Canvas inside Interactive3D.jsx
+- [x] Mount Interactive3D inside LandingPage hero column card
+- [x] Verify production compilation builds and local server startups
