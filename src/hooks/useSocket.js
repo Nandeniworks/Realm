@@ -10,7 +10,7 @@ export function useSocket(roomCode, user = null) {
   useEffect(() => {
     if (!roomCode) return;
 
-    const socketUrl = import.meta.env.VITE_SOCKET_URL || import.meta.env.VITE_API_URL || (import.meta.env.PROD ? 'https://realm-backend-production.up.railway.app' : undefined);
+    const socketUrl = import.meta.env.VITE_SOCKET_URL || import.meta.env.VITE_API_URL;
     
     if (!socketUrl) {
       console.error("[Socket Client] VITE_SOCKET_URL and VITE_API_URL are both missing. Cannot connect to backend.");

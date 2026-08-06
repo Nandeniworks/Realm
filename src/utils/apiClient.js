@@ -22,7 +22,7 @@ const onRefreshed = (token) => {
   refreshSubscribers = [];
 };
 
-const API_BASE = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/$/, '') : (import.meta.env.PROD ? 'https://realm-backend-production.up.railway.app' : '');
+const API_BASE = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/$/, '') : '';
 
 /**
  * Custom fetch wrapper that appends JWT Authorization header
