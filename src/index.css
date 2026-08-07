@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-serif: 'Fraunces', 'Cormorant Garamond', serif;
+
+  --color-realm-navy-dark: #040610;
+  --color-realm-navy-light: #0d1024;
+  --color-realm-navy-card: #080a18;
+  --color-realm-lavender: #c3c9ff;
+  --color-realm-pink: #f3c5c1;
+  --color-realm-gold: #f4d068;
+  --color-realm-moon: #e5e9ff;
+  --color-realm-moon-muted: #9ba0c0;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    background-color: #040610;
+    font-family: var(--font-sans);
+    color: var(--color-realm-moon);
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(4, 6, 16, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(195, 201, 255, 0.08);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(195, 201, 255, 0.18);
+}
+
+/* Luxury Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(8, 10, 24, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(195, 201, 255, 0.05);
+}
+
+.glass-panel-hover {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(8, 10, 24, 0.65);
+  border-color: rgba(195, 201, 255, 0.12);
+  box-shadow: 0 20px 40px rgba(4, 6, 16, 0.4);
+  transform: translateY(-2px);
+}
+
+.glass-input {
+  background: rgba(4, 6, 16, 0.5);
+  border: 1px solid rgba(195, 201, 255, 0.06);
+  outline: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-input:focus {
+  border-color: rgba(195, 201, 255, 0.22);
+  box-shadow: 0 0 20px rgba(195, 201, 255, 0.06);
+  background: rgba(4, 6, 16, 0.7);
+}
+
+/* Editorial typography utilities */
+.editorial-title {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.editorial-subtitle {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Premium smooth transitions */
+.page-transition-wrapper {
+  animation: page-fade-in 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
